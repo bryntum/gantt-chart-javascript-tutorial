@@ -78,18 +78,13 @@ export function cssStyles() {
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     }
 
-    #gantt-grid-container__tasks {
-      outline: 1px solid ${outlineColor};
-    }
-
     #gantt-grid-container__time {
       display: grid;
       overflow-x: auto;
-      outline: 1px solid ${outlineColor};
     }
 
     .gantt-task-row {
-        outline: 1px solid ${outlineColor};
+        outline: 0.5px solid ${outlineColor};
         text-align: center;
         height: ${CELL_HEIGHT}px;
         // expand across whole grid
@@ -131,7 +126,6 @@ export function cssStyles() {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(30px, 1fr);
-        outline: 0.5px solid ${outlineColor};
         text-align: center;
         height: ${CELL_HEIGHT}px;
     }
