@@ -181,7 +181,7 @@ export function GanttChart(ganttChartElement, tasks, taskDurations) {
 
     for (let i = 0; i < numMonths; i++) {
       const timePeriodEl = document.createElement("div");
-      timePeriodEl.className = "gantt-time-period";
+      timePeriodEl.className = "gantt-time-period day";
       containerTimePeriods.appendChild(timePeriodEl);
 
       // add days of the week as children

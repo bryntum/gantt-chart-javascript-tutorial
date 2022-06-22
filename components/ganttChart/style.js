@@ -9,7 +9,7 @@ export function cssStyles() {
     }
 
     html {
-      font-family: 'Noto Sans Display', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     h1 {
@@ -41,7 +41,7 @@ export function cssStyles() {
     }
 
     input {
-      font-family: 'Noto Sans Display', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       height: 100%;
       padding: 10px 5px;
       border: 1px solid #EDEDED;
@@ -55,6 +55,11 @@ export function cssStyles() {
 
     button:hover {
       cursor: pointer;
+    }
+    
+    .title {
+      text-align: center; 
+      margin-bottom: 20px
     }
 
     #gantt-container {
@@ -126,7 +131,7 @@ export function cssStyles() {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: minmax(30px, 1fr);
-        outline: 1px solid ${outlineColor};
+        outline: 0.5px solid ${outlineColor};
         text-align: center;
         height: ${CELL_HEIGHT}px;
     }
@@ -142,7 +147,11 @@ export function cssStyles() {
 
     .gantt-time-period-cell {
       position: relative;
-      outline: 1px solid ${outlineColor};
+      outline: 0.5px solid ${outlineColor};
+    }
+    
+    .day {
+      color: #bbb;
     }
 
     #settings {
@@ -154,11 +163,10 @@ export function cssStyles() {
 
     .taskDuration {
       position: absolute;
-      height: ${CELL_HEIGHT / 3}px;
-      top: ${CELL_HEIGHT / 3}px;
+      height: ${CELL_HEIGHT}px;
       z-index: 1;
       background: linear-gradient(90deg, rgba(158,221,255,1) 0%, rgba(0,149,228,1) 100%);
-      border-radius: 2px;
+      border-radius: 5px;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
       cursor: move;
     }
@@ -176,35 +184,20 @@ export function cssStyles() {
       display: flex;
       flex-wrap: wrap;
       padding: 1rem 0;
+      justify-content: space-between;
     }
 
     #add-forms-container form {
-      display: grid;
-      grid-template-rows: repeat(4, 1fr);
-      align-items: center;
+      padding: 1rem;
     }
 
     #add-forms-container form > * {
       display: flex;
       align-items: center;
-      margin: 0.3rem;
     }
 
     #add-forms-container input {
       height: ${CELL_HEIGHT}px;
-    }
-
-    #add-forms-container button {
-      color: white;
-      background: #2ade3c;
-      font-weight: 600;
-      font-size: 1.1rem;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      border: 0;
-      border-radius: 5px;
-      transition: all 0.3s ease;
     }
 
     #add-task, #add-task-duration {
@@ -216,5 +209,47 @@ export function cssStyles() {
     #add-forms-container button:focus {
       opacity: 0.85;
     }
+    
+    input[type=text], select {
+      padding: 5px 7px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+    }
+    
+
+    #add-forms-container button {
+      color: white;
+      background: #2ade3c;
+      font-size: 1.1rem;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+      padding: 0.5rem 1rem;
+      border: 0;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+    }
+    
+    .tracker-period {
+      padding: 1rem;
+    }
+    
+    .tracker-period h1{
+      margin-bottom: 16px;
+    }
+    
+    .inner-form-container {
+      display: flex; 
+      flex-direction: row
+    }
+    
+    .inner-form-container h1 {
+      margin-bottom: 0.5rem;
+    }  
   `;
 }
